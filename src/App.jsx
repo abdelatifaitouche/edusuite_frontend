@@ -1,10 +1,10 @@
-
-function App() {
-   return (
-    <>
-     <h1 className='bg-amber-400 text-white'>Hello edusuite</h1>
-    </>
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
+import { DataTable } from "./components/data-table"
+import data from "./app/dashboard/data.json"
+import LoginPage from "./login"
+export default function App({ children }) {
+  return (
+    <LoginPage/>
   )
 }
-
-export default App
