@@ -1,13 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import { AuthProvider } from "@/context/AuthContext";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-   <TooltipProvider>
-      <App />
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <TooltipProvider>
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </TooltipProvider>
-  </StrictMode>,
-)
+  </React.StrictMode>
+);
