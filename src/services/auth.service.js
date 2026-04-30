@@ -1,5 +1,22 @@
 import api from "./api";
 
-export const login = (data) => api.post("/auth/login", data);
-export const logout = () => api.post("/auth/logout");
-export const getMe = () => api.get("/auth/me");
+export const login = async (email, password) => {
+  const response = await api.post("/auth/login/", { email, password });
+  console.log(response)
+  return response.data;
+};
+
+export const getMe = async () => {
+  const response = await api.get("/auth/me");
+  return response.data;
+};
+
+
+
+export const logout = async () => {
+  const response = await api.post("/auth/logout/");
+  return response.data;
+};
+
+
+

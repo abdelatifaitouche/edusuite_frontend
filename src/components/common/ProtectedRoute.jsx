@@ -1,12 +1,19 @@
-import { Navigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
+// src/components/common/ProtectedRoute.jsx
+import { Navigate } from "react-router-dom"
+import { useAuth } from "@/context/AuthContext"
 
 export default function ProtectedRoute({ children }) {
-  const { user, loading } = useAuth();
+  const { user, loading } = useAuth()
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#1B3A6B]" />
+      </div>
+    )
+  }
 
-  if (!user) return <Navigate to="/login" />;
+  if (!user) return <Navigate to="/login" replace />
 
-  return children;
+  return children
 }
