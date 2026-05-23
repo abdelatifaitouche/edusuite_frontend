@@ -74,7 +74,7 @@ function TrainerRow({ trainer, index, onView }) {
 
       {/* Sessions */}
       <td className="py-3.5 px-4 hidden lg:table-cell text-center">
-        <span className="text-sm font-bold text-slate-700">{trainer.sessions_count ?? 0}</span>
+        <span className="text-sm font-bold text-slate-700">{trainer.telephone}</span>
       </td>
 
       {/* Formations */}
@@ -144,8 +144,8 @@ function TrainerCard({ trainer, index, onView }) {
 
       <div className="mt-4 pt-3 border-t border-slate-100 flex gap-4">
         <div className="text-center">
-          <p className="text-base font-black text-[#1B3A6B]">{trainer.sessions_count ?? 0}</p>
-          <p className="text-[10px] text-slate-400 uppercase tracking-wide">Sessions</p>
+          <p className="text-base font-black text-[#1B3A6B]">{trainer.telephone}</p>
+          <p className="text-[10px] text-slate-400 uppercase tracking-wide">telephone</p>
         </div>
         <div className="text-center">
           <p className="text-base font-black text-[#1B3A6B]">{trainer.formations_count ?? 0}</p>
@@ -521,7 +521,7 @@ export default function Trainers() {
                 <tr className="border-b border-slate-100 bg-slate-50/50">
                   <th className="text-left py-3 pl-6 pr-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">Formateur</th>
                   <th className="text-left py-3 px-4 text-[10px] font-bold uppercase tracking-widest text-slate-400 hidden sm:table-cell">Spécialité</th>
-                  <th className="text-left py-3 px-4 text-[10px] font-bold uppercase tracking-widest text-slate-400 hidden md:table-cell">Niveau</th>
+                  <th className="text-left py-3 px-4 text-[10px] font-bold uppercase tracking-widest text-slate-400 hidden md:table-cell">Telephone</th>
                   <th className="text-center py-3 px-4 text-[10px] font-bold uppercase tracking-widest text-slate-400 hidden lg:table-cell">Sessions</th>
                   <th className="text-center py-3 px-4 text-[10px] font-bold uppercase tracking-widest text-slate-400 hidden lg:table-cell">Formations</th>
                   <th className="text-left py-3 px-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">Statut</th>

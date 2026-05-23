@@ -5,5 +5,6 @@ export const ROUTES = {
   USERS: "/users",
   TRAINERS  : "/trainers",
   COURSES : "/courses",
-  OPPORTUNITIES : "/crm/opportunities"
+  OPPORTUNITIES : "/crm/opportunities",
+  COURSES_DETAILS : "/courses/:id"
 };
